@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic Material Downloads</title>
+<style>
+  :root {
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --primary: #2563eb;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 60px;
+    letter-spacing: -0.05em;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .card-content {
+    padding: 32px;
+    text-align: center;
+  }
+
+  .card h2 {
+    margin: 0 0 12px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .card p {
+    color: var(--text-muted);
+    margin: 0 0 28px 0;
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background: #000;
+    color: #fff;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .btn:hover {
+    background: var(--primary);
+    transform: scale(1.02);
+  }
+
+  /* MODAL */
+  .modal-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal {
+    background: #fff;
+    padding: 40px;
+    border-radius: 28px;
+    text-align: center;
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #f1f5f9;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 24px 0;
+  }
+
+  .progress {
+    height: 100%;
+    width: 0%;
+    background: var(--primary);
+    transition: width 0.3s ease;
+  }
+
+  .warning {
+    margin-top: 60px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #fee2e2;
+    color: #991b1b;
+    text-align: center;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>Material Downloads</h1>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/8zKS9fzX/IMG-20260408-184502.png" alt="All Certificate">
+    <div class="card-content">
+      <h2>All Certificate</h2>
+      <p>Ye certificates hamare company ke legal aur professional kaam ko dikhate hain. Isme hamari company ke liye jo bhi galti ya correct processes follow ki gayi hain, wo sab dikhaaya gaya hai. Lead ko trust build karne ke liye best content hai.</p>
+      <div class="btn" onclick="verifyDownload('https://drive.google.com/uc?export=download&id=1JFeMvaRi-dVQHnFYzktAShKMR5UnwTrC')">Download</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/sX5bjMs0/IMG-20260408-184520.png" alt="Feedback">
+    <div class="card-content">
+      <h2>Student Feedbacks</h2>
+      <p>Mere students ne apni first earning complete karne ke baad feedback diya hai. Ye feedbacks new leads ko motivate karne aur credibility dikhane ke liye use hota hai. Har lead ye dekh kar confident feel karega.</p>
+      <div class="btn" onclick="verifyDownload('#')">Download</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/HW2P6DxY/IMG-20260408-184541.png" alt="Earning Proof">
+    <div class="card-content">
+      <h2>My ID & Earning Proof</h2>
+      <p>Is file me maine apni ID aur earning proof dikhaya hai taki lead ko trust ho sake aur wo confident ho ke hamari guidance reliable hai.</p>
+      <div class="btn" onclick="verifyDownload('#')">Download</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/85bwXM1N/IMG-20260408-184556.png" alt="Highlight Covers">
+    <div class="card-content">
+      <h2>Instagram Highlight Covers</h2>
+      <p>Instagram per content upload karne ke baad highlight covers lagana padta hai. Ye premium highlight covers ka bundle hai jo profile attractive aur organized banata hai.</p>
+      <div class="btn" onclick="verifyDownload('#')">Download</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/GhfKfc1x/IMG-20260408-184608.png" alt="Action Taker">
+    <div class="card-content">
+      <h2>Action Taker</h2>
+      <p>Action taker ka matlab hai chhote amounts me apna stall ya charge book karna. Is file me action lene ka process aur guidance diya gaya hai, jisse lead ko clear roadmap mile.</p>
+      <div class="btn" onclick="verifyDownload('#')">Download</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/xC93m8LG/IMG-20260408-184623.png" alt="Achievers Poster">
+    <div class="card-content">
+      <h2>Achievers Poster</h2>
+      <p>Company ke members ki income aur achievements showcase karta hai. Ye posters Instagram per lagake credibility aur social proof create kar sakte ho.</p>
+      <div class="btn" onclick="verifyDownload('#')">Download</div>
+    </div>
+  </div>
+
+  <div class="warning">
+    ⚠️ Is material ko kisi ke saath share mat karna. Sirf personal use ke liye hai.
+  </div>
+</div>
+
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <h2 style="font-size: 1.2rem;">Verifying Access</h2>
+    <div class="progress-bar"><div class="progress" id="progress"></div></div>
+    <p id="status" style="font-size: 0.85rem; color: #64748b;">Please wait...</p>
+  </div>
+</div>
+
+<script>
+function verifyDownload(link){
+  const modal = document.getElementById('modal');
+  const progress = document.getElementById('progress');
+  const status = document.getElementById('status');
+  
+  modal.style.display = 'flex';
+  progress.style.width = '0%';
+  let width = 0;
+
+  let interval = setInterval(()=>{
+    width += Math.floor(Math.random()*15)+5;
+    if(width > 100) width = 100;
+    progress.style.width = width + '%';
+    if(width === 100){
+      clearInterval(interval);
+      status.innerText = 'Verified! Starting Download...';
+      setTimeout(()=>{
+        modal.style.display = 'none';
+        if(link !== '#'){
+          const a = document.createElement('a');
+          a.href = link;
+          a.click();
+        }
+      }, 800);
+    }
+  }, 250);
+}
+</script>
+</body>
+  </html>
+  
